@@ -1,0 +1,344 @@
+\hypertarget{class_sequence}{}\section{Sequence$<$ T\+Y\+P\+E $>$ Class Template Reference}
+\label{class_sequence}\index{Sequence$<$ T\+Y\+P\+E $>$@{Sequence$<$ T\+Y\+P\+E $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sequence_a69865d17cd69ba765a6cb034be7539b9}{Sequence} ()
+\item 
+\hyperlink{class_sequence_ace9aa11de35439018052db2efb8a7369}{$\sim$\+Sequence} ()
+\item 
+\hyperlink{class_sequence_a73d0aa763847bbaa3b2d4eca62abc8f7}{Sequence} (const \hyperlink{class_sequence}{Sequence}$<$ T\+Y\+P\+E $>$ \&s)
+\item 
+bool \hyperlink{class_sequence_a6418341e58be9f5d8303266521f5b4d3}{is\+Empty} ()
+\item 
+int \hyperlink{class_sequence_aa10151201b866f031d800519c94b1f60}{get\+Size} ()
+\item 
+bool \hyperlink{class_sequence_a4cc033f7279c21353908bc322985450d}{add\+First} (const T\+Y\+P\+E \&value)
+\item 
+bool \hyperlink{class_sequence_aba18baeedbc81a9b24c9331b4ee78881}{add\+Last} (const T\+Y\+P\+E \&value)
+\item 
+bool \hyperlink{class_sequence_a5c9bdbf02bea5ef4552c127f8bc40bda}{add} (const T\+Y\+P\+E \&value, int pos=0)
+\item 
+T\+Y\+P\+E \hyperlink{class_sequence_a6c2f27cca357a3f494e7f05209f11afc}{remove\+First} ()
+\item 
+T\+Y\+P\+E \hyperlink{class_sequence_a5325f9adedf34e7bbbae9a5241b167b0}{remove\+Last} ()
+\item 
+T\+Y\+P\+E \hyperlink{class_sequence_a041bb764297bfb85fe76a3fe21f80533}{remove} (int pos=0)
+\item 
+T\+Y\+P\+E \hyperlink{class_sequence_ac53c75e455dc23747148bbc14f808a91}{get\+First} ()
+\item 
+T\+Y\+P\+E \hyperlink{class_sequence_a25eacb0919853eab899ff5c687a0a26a}{get\+Last} ()
+\item 
+T\+Y\+P\+E \hyperlink{class_sequence_a08130d1d69774ffbe0f8942121604b12}{get} (int pos=0)
+\item 
+int \hyperlink{class_sequence_a52d217525d72abdca19e52c5f287734c}{search} (const T\+Y\+P\+E \&elm)
+\item 
+bool \hyperlink{class_sequence_ae9b4b08e48aa47199a1db42dd983c294}{is\+Equal} (\hyperlink{class_sequence}{Sequence}$<$ T\+Y\+P\+E $>$ \&s)
+\item 
+void \hyperlink{class_sequence_a377edb6182dd993d65d294f300033c19}{reverse} ()
+\item 
+void \hyperlink{class_sequence_a7c506a0479ef801d45871a81a1804e26}{sort} ()
+\item 
+void \hyperlink{class_sequence_aa60f1dca0a449df7bf830eab4a243742}{print} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_sequence_a98514e1ef695d598b4ebc5b6ca1cb350}{}Node {\bfseries list}\label{class_sequence_a98514e1ef695d598b4ebc5b6ca1cb350}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T\+Y\+P\+E$>$class Sequence$<$ T\+Y\+P\+E $>$}
+
+
+
+Definition at line 9 of file sequence.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_sequence_a69865d17cd69ba765a6cb034be7539b9}{}\index{Sequence@{Sequence}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!Sequence@{Sequence}}
+\subsubsection[{Sequence}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::{\bf Sequence} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a69865d17cd69ba765a6cb034be7539b9}
+Inicializa a sequência 
+
+Definition at line 3 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_ace9aa11de35439018052db2efb8a7369}{}\index{Sequence@{Sequence}!````~Sequence@{$\sim$\+Sequence}}
+\index{````~Sequence@{$\sim$\+Sequence}!Sequence@{Sequence}}
+\subsubsection[{$\sim$\+Sequence}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::$\sim${\bf Sequence} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sequence_ace9aa11de35439018052db2efb8a7369}
+Desaloca todos os elementos da sequência e volta ao estado inicial 
+
+Definition at line 6 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_a73d0aa763847bbaa3b2d4eca62abc8f7}{}\index{Sequence@{Sequence}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!Sequence@{Sequence}}
+\subsubsection[{Sequence}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E$>$ {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::{\bf Sequence} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sequence}$<$ T\+Y\+P\+E $>$ \&}]{s}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a73d0aa763847bbaa3b2d4eca62abc8f7}
+Constrói uma nova sequência a partir de uma já existente (os dados são duplicados) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sequence_a5c9bdbf02bea5ef4552c127f8bc40bda}{}\index{Sequence@{Sequence}!add@{add}}
+\index{add@{add}!Sequence@{Sequence}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ bool {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::add (
+\begin{DoxyParamCaption}
+\item[{const T\+Y\+P\+E \&}]{value, }
+\item[{int}]{pos = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a5c9bdbf02bea5ef4552c127f8bc40bda}
+Adiciona um elemento em uma posição específica da sequência. Se a posição dada for negativa, insere no ínicio. Se a posição for maior que o tamanho da sequência, insere no final. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Elemento a ser inserido \\
+\hline
+{\em pos} & Posição do elemento a ser inserido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro se o elemento foi adicionado ou falso caso contrário (memória cheia, por exemplo) 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_a4cc033f7279c21353908bc322985450d}{}\index{Sequence@{Sequence}!add\+First@{add\+First}}
+\index{add\+First@{add\+First}!Sequence@{Sequence}}
+\subsubsection[{add\+First}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ bool {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::add\+First (
+\begin{DoxyParamCaption}
+\item[{const T\+Y\+P\+E \&}]{value}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a4cc033f7279c21353908bc322985450d}
+Adiciona um elemento no início da sequência. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Elemento a ser inserido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro se o elemento foi adicionado ou falso caso contrário (memória cheia, por exemplo) 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_aba18baeedbc81a9b24c9331b4ee78881}{}\index{Sequence@{Sequence}!add\+Last@{add\+Last}}
+\index{add\+Last@{add\+Last}!Sequence@{Sequence}}
+\subsubsection[{add\+Last}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ bool {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::add\+Last (
+\begin{DoxyParamCaption}
+\item[{const T\+Y\+P\+E \&}]{value}
+\end{DoxyParamCaption}
+)}\label{class_sequence_aba18baeedbc81a9b24c9331b4ee78881}
+Adiciona um elemento no final da sequência 
+\begin{DoxyParams}{Parameters}
+{\em value} & Elemento a ser inserido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro se o elemento foi adicionado ou falso caso contrário (memória cheia, por exemplo) 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_a08130d1d69774ffbe0f8942121604b12}{}\index{Sequence@{Sequence}!get@{get}}
+\index{get@{get}!Sequence@{Sequence}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ T\+Y\+P\+E {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::get (
+\begin{DoxyParamCaption}
+\item[{int}]{pos = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a08130d1d69774ffbe0f8942121604b12}
+Consulta o elemento de uma posição específica \begin{DoxyReturn}{Returns}
+Uma cópia do elemento 
+\end{DoxyReturn}
+
+
+Definition at line 194 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_ac53c75e455dc23747148bbc14f808a91}{}\index{Sequence@{Sequence}!get\+First@{get\+First}}
+\index{get\+First@{get\+First}!Sequence@{Sequence}}
+\subsubsection[{get\+First}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ T\+Y\+P\+E {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::get\+First (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sequence_ac53c75e455dc23747148bbc14f808a91}
+Consulta o primeiro elemento da sequência \begin{DoxyReturn}{Returns}
+Uma cópia do primeiro elemento 
+\end{DoxyReturn}
+
+
+Definition at line 182 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_a25eacb0919853eab899ff5c687a0a26a}{}\index{Sequence@{Sequence}!get\+Last@{get\+Last}}
+\index{get\+Last@{get\+Last}!Sequence@{Sequence}}
+\subsubsection[{get\+Last}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ T\+Y\+P\+E {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::get\+Last (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a25eacb0919853eab899ff5c687a0a26a}
+Consulta o último elemento da sequência \begin{DoxyReturn}{Returns}
+Uma cópia do último elemento 
+\end{DoxyReturn}
+
+
+Definition at line 188 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_aa10151201b866f031d800519c94b1f60}{}\index{Sequence@{Sequence}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Sequence@{Sequence}}
+\subsubsection[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ int {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sequence_aa10151201b866f031d800519c94b1f60}
+Retorna o número de elementos na sequência 
+
+Definition at line 41 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_a6418341e58be9f5d8303266521f5b4d3}{}\index{Sequence@{Sequence}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Sequence@{Sequence}}
+\subsubsection[{is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ bool {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a6418341e58be9f5d8303266521f5b4d3}
+Verifica se a sequência está vazia \begin{DoxyReturn}{Returns}
+se vazia retorna true se não false. 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_ae9b4b08e48aa47199a1db42dd983c294}{}\index{Sequence@{Sequence}!is\+Equal@{is\+Equal}}
+\index{is\+Equal@{is\+Equal}!Sequence@{Sequence}}
+\subsubsection[{is\+Equal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ bool {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::is\+Equal (
+\begin{DoxyParamCaption}
+\item[{{\bf Sequence}$<$ T\+Y\+P\+E $>$ \&}]{s}
+\end{DoxyParamCaption}
+)}\label{class_sequence_ae9b4b08e48aa47199a1db42dd983c294}
+Verifica se todos os elementos (e sua ordem) de uma sequência são iguais aos elementos de outra sequência 
+\begin{DoxyParams}{Parameters}
+{\em s} & Sequência a ser comparada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdadeiro se elas forem iguais ou falso caso contrário 
+\end{DoxyReturn}
+
+
+Definition at line 232 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_aa60f1dca0a449df7bf830eab4a243742}{}\index{Sequence@{Sequence}!print@{print}}
+\index{print@{print}!Sequence@{Sequence}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ void {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sequence_aa60f1dca0a449df7bf830eab4a243742}
+Envia para a saída-\/padrão os elementos da sequência. 
+
+Definition at line 302 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_a041bb764297bfb85fe76a3fe21f80533}{}\index{Sequence@{Sequence}!remove@{remove}}
+\index{remove@{remove}!Sequence@{Sequence}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ T\+Y\+P\+E {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{int}]{pos = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a041bb764297bfb85fe76a3fe21f80533}
+Remove o elemento de uma posição específica. Se a posição dada for negativa, remove o primeiro elemento. Se for maior que o tamanho, remove o último. 
+\begin{DoxyParams}{Parameters}
+{\em pos} & Posição do elemento a ser removido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uma cópia do elemento removido 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_a6c2f27cca357a3f494e7f05209f11afc}{}\index{Sequence@{Sequence}!remove\+First@{remove\+First}}
+\index{remove\+First@{remove\+First}!Sequence@{Sequence}}
+\subsubsection[{remove\+First}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ T\+Y\+P\+E {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::remove\+First (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a6c2f27cca357a3f494e7f05209f11afc}
+Remove o primeiro elemento da sequência \begin{DoxyReturn}{Returns}
+Uma cópia do elemento removido 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_a5325f9adedf34e7bbbae9a5241b167b0}{}\index{Sequence@{Sequence}!remove\+Last@{remove\+Last}}
+\index{remove\+Last@{remove\+Last}!Sequence@{Sequence}}
+\subsubsection[{remove\+Last}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ T\+Y\+P\+E {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::remove\+Last (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a5325f9adedf34e7bbbae9a5241b167b0}
+Remove o último elemento da sequência \begin{DoxyReturn}{Returns}
+Uma cópia do elemento removido 
+\end{DoxyReturn}
+
+
+Definition at line 134 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_a377edb6182dd993d65d294f300033c19}{}\index{Sequence@{Sequence}!reverse@{reverse}}
+\index{reverse@{reverse}!Sequence@{Sequence}}
+\subsubsection[{reverse}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ void {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::reverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a377edb6182dd993d65d294f300033c19}
+Inverte os elementos de uma sequência. O primeiro passa a ser o último, o segundo passa a ser o penúltimo e assim por diante. 
+
+Definition at line 251 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_a52d217525d72abdca19e52c5f287734c}{}\index{Sequence@{Sequence}!search@{search}}
+\index{search@{search}!Sequence@{Sequence}}
+\subsubsection[{search}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ int {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::search (
+\begin{DoxyParamCaption}
+\item[{const T\+Y\+P\+E \&}]{elm}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a52d217525d72abdca19e52c5f287734c}
+Consulta a posição de um elemento na sequência 
+\begin{DoxyParams}{Parameters}
+{\em elm} & Elemento a ser consultado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Posição em que ele se encontra ou -\/1 se ele não existir na sequência 
+\end{DoxyReturn}
+
+
+Definition at line 216 of file sequence.\+cpp.
+
+\hypertarget{class_sequence_a7c506a0479ef801d45871a81a1804e26}{}\index{Sequence@{Sequence}!sort@{sort}}
+\index{sort@{sort}!Sequence@{Sequence}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ void {\bf Sequence}$<$ T\+Y\+P\+E $>$\+::sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sequence_a7c506a0479ef801d45871a81a1804e26}
+Ordena os dados de uma sequência. 
+
+Definition at line 273 of file sequence.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sequence.\+h\item 
+sequence.\+cpp\end{DoxyCompactItemize}

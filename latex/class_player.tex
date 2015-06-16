@@ -1,0 +1,86 @@
+\hypertarget{class_player}{}\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+Representa um jogador.  
+
+
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_player_a32aad167b7d41694952c3731c5e55ea4}{}{\bfseries Player} (const std\+::string \&name=\char`\"{}Sem nome\char`\"{}, const \hyperlink{class_color}{Color} \&color=\hyperlink{class_color}{Color}(255, 0, 0))\label{class_player_a32aad167b7d41694952c3731c5e55ea4}
+
+\item 
+\hyperlink{struct_labirinto_1_1_cell}{Labirinto\+::\+Cell} \hyperlink{class_player_ac080f98d0b6ab04f07e2e2e65868c11c}{get\+Cell} () const 
+\begin{DoxyCompactList}\small\item\em Obtem a celula na qual o jogador esta. \end{DoxyCompactList}\item 
+bool \hyperlink{class_player_a7b7a8bf62f14126e4b8baf8ef087ac97}{set\+Cell} (const \hyperlink{struct_labirinto_1_1_cell}{Labirinto\+::\+Cell} \&cell)
+\begin{DoxyCompactList}\small\item\em Define a celula na qual o jogador esta. \end{DoxyCompactList}\item 
+\hypertarget{class_player_a3660536cb21311d5480df9a2dc8b051a}{}\hyperlink{class_color}{Color} {\bfseries get\+Color} () const \label{class_player_a3660536cb21311d5480df9a2dc8b051a}
+
+\item 
+\hypertarget{class_player_a647e6a411f2fb94dce137307a5d9785e}{}void {\bfseries set\+Color} (const \hyperlink{class_color}{Color} \&color)\label{class_player_a647e6a411f2fb94dce137307a5d9785e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Representa um jogador. 
+
+Projeto\+: Maze Versao\+: 1.\+0b Autores\+: Leno Raimundo 
+
+Definition at line 21 of file player.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_ac080f98d0b6ab04f07e2e2e65868c11c}{}\index{Player@{Player}!get\+Cell@{get\+Cell}}
+\index{get\+Cell@{get\+Cell}!Player@{Player}}
+\subsubsection[{get\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Labirinto\+::\+Cell} Player\+::get\+Cell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_player_ac080f98d0b6ab04f07e2e2e65868c11c}
+
+
+Obtem a celula na qual o jogador esta. 
+
+\begin{DoxyReturn}{Returns}
+a celula na qual o jogador esta 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file player.\+h.
+
+\hypertarget{class_player_a7b7a8bf62f14126e4b8baf8ef087ac97}{}\index{Player@{Player}!set\+Cell@{set\+Cell}}
+\index{set\+Cell@{set\+Cell}!Player@{Player}}
+\subsubsection[{set\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\+::set\+Cell (
+\begin{DoxyParamCaption}
+\item[{const {\bf Labirinto\+::\+Cell} \&}]{cell}
+\end{DoxyParamCaption}
+)}\label{class_player_a7b7a8bf62f14126e4b8baf8ef087ac97}
+
+
+Define a celula na qual o jogador esta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & uma celua valida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true. 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file player.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+player.\+h\item 
+player.\+cpp\end{DoxyCompactItemize}

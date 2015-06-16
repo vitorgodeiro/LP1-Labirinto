@@ -1,0 +1,165 @@
+\hypertarget{class_queue}{}\section{Queue$<$ T\+Y\+P\+E $>$ Class Template Reference}
+\label{class_queue}\index{Queue$<$ T\+Y\+P\+E $>$@{Queue$<$ T\+Y\+P\+E $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_queue_a2da5c01a70e99abfedf529f2592fa55c}{Queue} ()
+\item 
+\hyperlink{class_queue_acc8135c39b42b208a665bbc96e56b663}{$\sim$\+Queue} ()
+\item 
+T\+Y\+P\+E \hyperlink{class_queue_a0a47859a45541aec9192c26a44055445}{front} ()
+\item 
+bool \hyperlink{class_queue_af0d8e729c853a5d56b275260b3c63565}{enqueue} (T\+Y\+P\+E value)
+\item 
+T\+Y\+P\+E \hyperlink{class_queue_ae76570adc4adad92792440083a58d594}{dequeue} ()
+\item 
+bool \hyperlink{class_queue_a48881097f65860e871b4bd7469f0ba8f}{is\+Empty} ()
+\item 
+void \hyperlink{class_queue_ac6c6e763f72fa7c0556ad29005fdafd7}{print} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T\+Y\+P\+E$>$class Queue$<$ T\+Y\+P\+E $>$}
+
+
+
+Definition at line 6 of file queue.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_queue_a2da5c01a70e99abfedf529f2592fa55c}{}\index{Queue@{Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!Queue@{Queue}}
+\subsubsection[{Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ {\bf Queue}$<$ T\+Y\+P\+E $>$\+::{\bf Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_queue_a2da5c01a70e99abfedf529f2592fa55c}
+Descrição\+: Metodo construtor.
+
+Parâmetros\+: Não possui.
+
+\begin{DoxyReturn}{Returns}
+. 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file queue.\+h.
+
+\hypertarget{class_queue_acc8135c39b42b208a665bbc96e56b663}{}\index{Queue@{Queue}!````~Queue@{$\sim$\+Queue}}
+\index{````~Queue@{$\sim$\+Queue}!Queue@{Queue}}
+\subsubsection[{$\sim$\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ {\bf Queue}$<$ T\+Y\+P\+E $>$\+::$\sim${\bf Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_queue_acc8135c39b42b208a665bbc96e56b663}
+Descrição\+: Metodo destrutor
+
+Parâmetros\+: Não possui.
+
+\begin{DoxyReturn}{Returns}
+. 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file queue.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_queue_ae76570adc4adad92792440083a58d594}{}\index{Queue@{Queue}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!Queue@{Queue}}
+\subsubsection[{dequeue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ T\+Y\+P\+E {\bf Queue}$<$ T\+Y\+P\+E $>$\+::dequeue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_queue_ae76570adc4adad92792440083a58d594}
+Descrição\+: Metodo responsável por remover o primeiro elemento da fila.
+
+Parâmetros\+: Não possui.
+
+\begin{DoxyReturn}{Returns}
+T\+Y\+P\+E. valor retornado\+: O valor do elemento removido. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file queue.\+h.
+
+\hypertarget{class_queue_af0d8e729c853a5d56b275260b3c63565}{}\index{Queue@{Queue}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!Queue@{Queue}}
+\subsubsection[{enqueue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ bool {\bf Queue}$<$ T\+Y\+P\+E $>$\+::enqueue (
+\begin{DoxyParamCaption}
+\item[{T\+Y\+P\+E}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_queue_af0d8e729c853a5d56b275260b3c63565}
+Descrição\+: Metodo responsável por adicionar o ultimo elemento da fila.
+
+Parâmetros\+: value(o valor a ser adicionado).
+
+\begin{DoxyReturn}{Returns}
+bool. valor retornado\+: Verdadeiro se o elemento foi adicionado ou falso caso contrário (memória cheia, por exemplo). 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file queue.\+h.
+
+\hypertarget{class_queue_a0a47859a45541aec9192c26a44055445}{}\index{Queue@{Queue}!front@{front}}
+\index{front@{front}!Queue@{Queue}}
+\subsubsection[{front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ T\+Y\+P\+E {\bf Queue}$<$ T\+Y\+P\+E $>$\+::front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_queue_a0a47859a45541aec9192c26a44055445}
+Descrição\+: Metodo responsável por pegar o primeiro elemento da fila.
+
+Parâmetros\+: Não possui.
+
+\begin{DoxyReturn}{Returns}
+T\+Y\+P\+E. valor retornado\+: Retorna o primeiro elemento da fila. 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file queue.\+h.
+
+\hypertarget{class_queue_a48881097f65860e871b4bd7469f0ba8f}{}\index{Queue@{Queue}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Queue@{Queue}}
+\subsubsection[{is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ bool {\bf Queue}$<$ T\+Y\+P\+E $>$\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_queue_a48881097f65860e871b4bd7469f0ba8f}
+Descrição\+: Metodo responsável por verficar se existe elemento da fila.
+
+Parâmetros\+: Não possui.
+
+\begin{DoxyReturn}{Returns}
+bool. valor retornado\+: Se não possui elemento retorna true, se possui retorna false. 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file queue.\+h.
+
+\hypertarget{class_queue_ac6c6e763f72fa7c0556ad29005fdafd7}{}\index{Queue@{Queue}!print@{print}}
+\index{print@{print}!Queue@{Queue}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+Y\+P\+E $>$ void {\bf Queue}$<$ T\+Y\+P\+E $>$\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_queue_ac6c6e763f72fa7c0556ad29005fdafd7}
+Descrição\+: Metodo responsável por imprimir os elementos da fila.
+
+Parâmetros\+: Não possui.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file queue.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+queue.\+h\end{DoxyCompactItemize}

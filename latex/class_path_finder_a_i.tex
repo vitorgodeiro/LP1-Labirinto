@@ -1,0 +1,296 @@
+\hypertarget{class_path_finder_a_i}{}\section{Path\+Finder\+A\+I Class Reference}
+\label{class_path_finder_a_i}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+
+
+Cria a inteligencia artificial para caminhar no labirinto ate atingir uma celula. A I\+A foi modelada usando o seguinte\+:  
+
+
+
+
+{\ttfamily \#include $<$pathfinderai.\+h$>$}
+
+Inheritance diagram for Path\+Finder\+A\+I\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_path_finder_a_i}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_path_finder_a_i_a2efb996de79146ca2cad3d61d19bd0c9}{start} ()
+\begin{DoxyCompactList}\small\item\em Inicia a procura pela celula final. \end{DoxyCompactList}\item 
+bool \hyperlink{class_path_finder_a_i_a26b87529dbb30a2c151af42a790e8f61}{stop} ()
+\begin{DoxyCompactList}\small\item\em Interrompe a procura pela celula final. \end{DoxyCompactList}\item 
+int \hyperlink{class_path_finder_a_i_af3abb07e07360f6e1b60b2b34c38e9e3}{get\+I\+Q} () const 
+\begin{DoxyCompactList}\small\item\em Obtem o coeficiente de inteligencia da busca pela celula final. \end{DoxyCompactList}\item 
+bool \hyperlink{class_path_finder_a_i_a3e53eb6b981c8721f9670470ea8f4c80}{set\+I\+Q} (int iq)
+\begin{DoxyCompactList}\small\item\em Define o coeficiente de inteligencia da busca pela celula final. \end{DoxyCompactList}\item 
+\hyperlink{class_labirinto}{Labirinto} $\ast$ \hyperlink{class_path_finder_a_i_aa1634bdbad590e159bcacd43d1a18468}{get\+Labirinto} () const 
+\begin{DoxyCompactList}\small\item\em Obtem o labirinto usado na busca. \end{DoxyCompactList}\item 
+void \hyperlink{class_path_finder_a_i_a2296c35be51fd6fdc6dd98bf6c344867}{set\+Labirinto} (\hyperlink{class_labirinto}{Labirinto} $\ast$labirinto)
+\begin{DoxyCompactList}\small\item\em Define o labirinto usado na busca. \end{DoxyCompactList}\item 
+\hyperlink{struct_labirinto_1_1_cell}{Labirinto\+::\+Cell} \hyperlink{class_path_finder_a_i_a7fe151b032792b40f7d2fa9acd33a01c}{get\+Initial\+Cell} () const 
+\begin{DoxyCompactList}\small\item\em Obtem a celula inicial, ou seja, aquela da qual comecara a busca. \end{DoxyCompactList}\item 
+\hyperlink{struct_labirinto_1_1_cell}{Labirinto\+::\+Cell} \hyperlink{class_path_finder_a_i_a5489d2faf1c7c3f7cdb401d4624231cf}{get\+Final\+Cell} () const 
+\begin{DoxyCompactList}\small\item\em Obtem a celula final, ou seja, aquela na qual terminara a busca. \end{DoxyCompactList}\item 
+\hyperlink{struct_labirinto_1_1_cell}{Labirinto\+::\+Cell} \hyperlink{class_path_finder_a_i_add2b9e88e3bd509b837b12297c846f10}{get\+Current\+Cell} ()
+\begin{DoxyCompactList}\small\item\em Obtem a celula atual na busca. \end{DoxyCompactList}\item 
+void \hyperlink{class_path_finder_a_i_aa95d25fd460d4e12fdaf90e8a8715fc4}{set\+Initial\+Cell} (const \hyperlink{struct_labirinto_1_1_cell}{Labirinto\+::\+Cell} \&cell)
+\begin{DoxyCompactList}\small\item\em Define a celula inicial. \end{DoxyCompactList}\item 
+void \hyperlink{class_path_finder_a_i_a705c39f6d8596d658742b40d5f707058}{set\+Final\+Cell} (const \hyperlink{struct_labirinto_1_1_cell}{Labirinto\+::\+Cell} \&cell)
+\begin{DoxyCompactList}\small\item\em Define a celula final. \end{DoxyCompactList}\item 
+void \hyperlink{class_path_finder_a_i_ae8ddaab163d826e91c4893d573c4f302}{set\+Current\+Cell} (const \hyperlink{struct_labirinto_1_1_cell}{Labirinto\+::\+Cell} \&cell)
+\begin{DoxyCompactList}\small\item\em Define a celula atual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cria a inteligencia artificial para caminhar no labirinto ate atingir uma celula. A I\+A foi modelada usando o seguinte\+: 
+
+Projeto\+: Maze Versao\+: 1.\+0b Autores\+: Leno Raimundo
+\begin{DoxyItemize}
+\item Tempo para tomar uma decisao, ou seja, o tempo para ir para a proxima celula;
+\item Probabilidade de tomar a decisao certa, ou seja, a probabilidade de a proxima celula ser a certa;
+\item Capacidade de memoria\+: quantidade de celulas ja visitadas que a A\+I consegue lembrar 
+\end{DoxyItemize}
+
+Definition at line 27 of file pathfinderai.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_path_finder_a_i_add2b9e88e3bd509b837b12297c846f10}{}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}!get\+Current\+Cell@{get\+Current\+Cell}}
+\index{get\+Current\+Cell@{get\+Current\+Cell}!Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+\subsubsection[{get\+Current\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Labirinto\+::\+Cell} Path\+Finder\+A\+I\+::get\+Current\+Cell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_path_finder_a_i_add2b9e88e3bd509b837b12297c846f10}
+
+
+Obtem a celula atual na busca. 
+
+\begin{DoxyReturn}{Returns}
+a celula atual 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file pathfinderai.\+cpp.
+
+\hypertarget{class_path_finder_a_i_a5489d2faf1c7c3f7cdb401d4624231cf}{}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}!get\+Final\+Cell@{get\+Final\+Cell}}
+\index{get\+Final\+Cell@{get\+Final\+Cell}!Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+\subsubsection[{get\+Final\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Labirinto\+::\+Cell} Path\+Finder\+A\+I\+::get\+Final\+Cell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_path_finder_a_i_a5489d2faf1c7c3f7cdb401d4624231cf}
+
+
+Obtem a celula final, ou seja, aquela na qual terminara a busca. 
+
+\begin{DoxyReturn}{Returns}
+a celula final 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file pathfinderai.\+h.
+
+\hypertarget{class_path_finder_a_i_a7fe151b032792b40f7d2fa9acd33a01c}{}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}!get\+Initial\+Cell@{get\+Initial\+Cell}}
+\index{get\+Initial\+Cell@{get\+Initial\+Cell}!Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+\subsubsection[{get\+Initial\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Labirinto\+::\+Cell} Path\+Finder\+A\+I\+::get\+Initial\+Cell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_path_finder_a_i_a7fe151b032792b40f7d2fa9acd33a01c}
+
+
+Obtem a celula inicial, ou seja, aquela da qual comecara a busca. 
+
+\begin{DoxyReturn}{Returns}
+a celula inicial 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file pathfinderai.\+h.
+
+\hypertarget{class_path_finder_a_i_af3abb07e07360f6e1b60b2b34c38e9e3}{}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}!get\+I\+Q@{get\+I\+Q}}
+\index{get\+I\+Q@{get\+I\+Q}!Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+\subsubsection[{get\+I\+Q}]{\setlength{\rightskip}{0pt plus 5cm}int Path\+Finder\+A\+I\+::get\+I\+Q (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_path_finder_a_i_af3abb07e07360f6e1b60b2b34c38e9e3}
+
+
+Obtem o coeficiente de inteligencia da busca pela celula final. 
+
+\begin{DoxyReturn}{Returns}
+um inteiro de 1 a 200 que representa o coeficiente de inteligencia usado na busca 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file pathfinderai.\+h.
+
+\hypertarget{class_path_finder_a_i_aa1634bdbad590e159bcacd43d1a18468}{}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}!get\+Labirinto@{get\+Labirinto}}
+\index{get\+Labirinto@{get\+Labirinto}!Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+\subsubsection[{get\+Labirinto}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Labirinto}$\ast$ Path\+Finder\+A\+I\+::get\+Labirinto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_path_finder_a_i_aa1634bdbad590e159bcacd43d1a18468}
+
+
+Obtem o labirinto usado na busca. 
+
+\begin{DoxyReturn}{Returns}
+o labirinto usado na busca, ou N\+U\+L\+L se ele nao existe. 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file pathfinderai.\+h.
+
+\hypertarget{class_path_finder_a_i_ae8ddaab163d826e91c4893d573c4f302}{}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}!set\+Current\+Cell@{set\+Current\+Cell}}
+\index{set\+Current\+Cell@{set\+Current\+Cell}!Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+\subsubsection[{set\+Current\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Finder\+A\+I\+::set\+Current\+Cell (
+\begin{DoxyParamCaption}
+\item[{const {\bf Labirinto\+::\+Cell} \&}]{cell}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_path_finder_a_i_ae8ddaab163d826e91c4893d573c4f302}
+
+
+Define a celula atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & uma celula valida \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 112 of file pathfinderai.\+h.
+
+\hypertarget{class_path_finder_a_i_a705c39f6d8596d658742b40d5f707058}{}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}!set\+Final\+Cell@{set\+Final\+Cell}}
+\index{set\+Final\+Cell@{set\+Final\+Cell}!Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+\subsubsection[{set\+Final\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Finder\+A\+I\+::set\+Final\+Cell (
+\begin{DoxyParamCaption}
+\item[{const {\bf Labirinto\+::\+Cell} \&}]{cell}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_path_finder_a_i_a705c39f6d8596d658742b40d5f707058}
+
+
+Define a celula final. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & uma celula valida \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 106 of file pathfinderai.\+h.
+
+\hypertarget{class_path_finder_a_i_aa95d25fd460d4e12fdaf90e8a8715fc4}{}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}!set\+Initial\+Cell@{set\+Initial\+Cell}}
+\index{set\+Initial\+Cell@{set\+Initial\+Cell}!Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+\subsubsection[{set\+Initial\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Finder\+A\+I\+::set\+Initial\+Cell (
+\begin{DoxyParamCaption}
+\item[{const {\bf Labirinto\+::\+Cell} \&}]{cell}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_path_finder_a_i_aa95d25fd460d4e12fdaf90e8a8715fc4}
+
+
+Define a celula inicial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & uma celula valida \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file pathfinderai.\+h.
+
+\hypertarget{class_path_finder_a_i_a3e53eb6b981c8721f9670470ea8f4c80}{}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}!set\+I\+Q@{set\+I\+Q}}
+\index{set\+I\+Q@{set\+I\+Q}!Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+\subsubsection[{set\+I\+Q}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Finder\+A\+I\+::set\+I\+Q (
+\begin{DoxyParamCaption}
+\item[{int}]{iq}
+\end{DoxyParamCaption}
+)}\label{class_path_finder_a_i_a3e53eb6b981c8721f9670470ea8f4c80}
+
+
+Define o coeficiente de inteligencia da busca pela celula final. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iq} & um numero de 1 a 200. Quanto maior, mais rapida e eficiente e a busca pela celula final. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sempre true. 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file pathfinderai.\+cpp.
+
+\hypertarget{class_path_finder_a_i_a2296c35be51fd6fdc6dd98bf6c344867}{}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}!set\+Labirinto@{set\+Labirinto}}
+\index{set\+Labirinto@{set\+Labirinto}!Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+\subsubsection[{set\+Labirinto}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Finder\+A\+I\+::set\+Labirinto (
+\begin{DoxyParamCaption}
+\item[{{\bf Labirinto} $\ast$}]{labirinto}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_path_finder_a_i_a2296c35be51fd6fdc6dd98bf6c344867}
+
+
+Define o labirinto usado na busca. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em labirinto} & um labirinto \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 74 of file pathfinderai.\+h.
+
+\hypertarget{class_path_finder_a_i_a2efb996de79146ca2cad3d61d19bd0c9}{}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}!start@{start}}
+\index{start@{start}!Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Finder\+A\+I\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_path_finder_a_i_a2efb996de79146ca2cad3d61d19bd0c9}
+
+
+Inicia a procura pela celula final. 
+
+\begin{DoxyReturn}{Returns}
+sempre true. 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file pathfinderai.\+cpp.
+
+\hypertarget{class_path_finder_a_i_a26b87529dbb30a2c151af42a790e8f61}{}\index{Path\+Finder\+A\+I@{Path\+Finder\+A\+I}!stop@{stop}}
+\index{stop@{stop}!Path\+Finder\+A\+I@{Path\+Finder\+A\+I}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Finder\+A\+I\+::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_path_finder_a_i_a26b87529dbb30a2c151af42a790e8f61}
+
+
+Interrompe a procura pela celula final. 
+
+\begin{DoxyReturn}{Returns}
+sempre true. 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file pathfinderai.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+pathfinderai.\+h\item 
+pathfinderai.\+cpp\end{DoxyCompactItemize}

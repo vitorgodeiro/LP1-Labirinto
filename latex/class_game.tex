@@ -1,0 +1,451 @@
+\hypertarget{class_game}{}\section{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+
+
+Gerencia o jogo.  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+Inheritance diagram for Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_game_1_1_rank}{Rank}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_aa9e701b2208301d5a5a67816ea54fe19}{}enum \hyperlink{class_game_aa9e701b2208301d5a5a67816ea54fe19}{Dificuldade} \{ {\bfseries Facil}, 
+{\bfseries Medio}, 
+{\bfseries Dificil}
+ \}\label{class_game_aa9e701b2208301d5a5a67816ea54fe19}
+
+\begin{DoxyCompactList}\small\item\em Define os niveis de dificuldade do jogo. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a78224b33425ca8e37cc762f8a181663e}{}enum \hyperlink{class_game_a78224b33425ca8e37cc762f8a181663e}{Mode} \{ {\bfseries Carreira}, 
+{\bfseries Multiplayer}, 
+{\bfseries Competir}, 
+{\bfseries Treinar}
+ \}\label{class_game_a78224b33425ca8e37cc762f8a181663e}
+
+\begin{DoxyCompactList}\small\item\em Define os modos de jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_game_a290ed80541953c02d4012feae9cf84b4}{set\+Show\+Labirinto} (bool yes=true)
+\begin{DoxyCompactList}\small\item\em Exibe ou oculta o labirinto. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a74afd2e4820b0113a1276ba866e5e689}{set\+Wall\+Color} (const \hyperlink{class_color}{Color} \&color)
+\begin{DoxyCompactList}\small\item\em Define a cor da parede. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_ae2c8fe91e4c6c7e7e49149bc70e7a5c8}{set\+Cell\+Color} (const \hyperlink{class_color}{Color} \&color)
+\begin{DoxyCompactList}\small\item\em Define a cor da celula. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a68e69f6f417f07c7f7bfc7e5660d23ab}{set\+Mode} (\hyperlink{class_game_a78224b33425ca8e37cc762f8a181663e}{Mode} mode)
+\begin{DoxyCompactList}\small\item\em Define o modo de jogo. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_aaa49bf77525ace364d84eb5840fb7f16}{set\+Dificuldade} (\hyperlink{class_game_aa9e701b2208301d5a5a67816ea54fe19}{Dificuldade} dif)
+\begin{DoxyCompactList}\small\item\em Define a dificuldade do jogo. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a32ec249abb13c2d4f45f07003046536c}{set\+Wall\+Thickness} (int thickness=1)
+\begin{DoxyCompactList}\small\item\em Define a espessura da parede. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a2116158681dfa5fdb17e1ebbadd3348e}{set\+Cell\+Size} (int size=10)
+\begin{DoxyCompactList}\small\item\em Define o tamanho de cada celula do labirinto. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{}void \hyperlink{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{start} ()\label{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}
+
+\begin{DoxyCompactList}\small\item\em Inicia o jogo. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a17fbb36fd4a2085f9ff4f1fa93d7d08b}{}void \hyperlink{class_game_a17fbb36fd4a2085f9ff4f1fa93d7d08b}{stop} ()\label{class_game_a17fbb36fd4a2085f9ff4f1fa93d7d08b}
+
+\begin{DoxyCompactList}\small\item\em Para o jogo. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_abb31098c8d016b98888fe9acac497fcb}{is\+Running} () const 
+\begin{DoxyCompactList}\small\item\em Checa se o jogo esta em andamento. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_ad957f89ebf5557d687332737f5c48174}{set\+Show\+Path} (bool yes)
+\begin{DoxyCompactList}\small\item\em Oculta ou exibe o caminho para sair do labirinto. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_acf0eab33d0720829856f04df97ae0b60}{set\+Show\+Player1} (bool yes)
+\begin{DoxyCompactList}\small\item\em Oculta ou mostra o player1\+\_\+. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a8c3fb62db4b6712d32dc02897464ef77}{set\+Show\+Player2} (bool yes)
+\begin{DoxyCompactList}\small\item\em Oculta ou mostra o player2\+\_\+. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_afc0740e2ebbf574081ba72894ffb167d}{get\+Show\+Path} () const 
+\begin{DoxyCompactList}\small\item\em Indica se o caminho de saida esta ou nao sendo exibido. \end{DoxyCompactList}\item 
+\hyperlink{class_rect}{Rect} \hyperlink{class_game_a5a0887d56454e9f31f800018f211ab1f}{get\+View\+Rect} () const 
+\begin{DoxyCompactList}\small\item\em get\+View\+Rect \end{DoxyCompactList}\item 
+\hypertarget{class_game_a4d1eb4468fe2a307fa7ca738dd7cfa40}{}void {\bfseries set\+View\+Rect} (const \hyperlink{class_rect}{Rect} \&rect)\label{class_game_a4d1eb4468fe2a307fa7ca738dd7cfa40}
+
+\item 
+\hypertarget{class_game_a741d01349d27c8916d6e9975d9c5b470}{}\hyperlink{class_main_window}{Main\+Window} $\ast$ {\bfseries get\+Main\+Window} ()\label{class_game_a741d01349d27c8916d6e9975d9c5b470}
+
+\item 
+\hypertarget{class_game_ae9c76f7611a410ac2c92df34cff50a41}{}void {\bfseries set\+Main\+Window} (\hyperlink{class_main_window}{Main\+Window} $\ast$main\+\_\+window)\label{class_game_ae9c76f7611a410ac2c92df34cff50a41}
+
+\item 
+void \hyperlink{class_game_a178202f60562a3e55ad721dfb03aff09}{Ler\+\_\+\+Rank} ()
+\begin{DoxyCompactList}\small\item\em Ler\+\_\+\+Rank é responsável por fazer a leitura do rank. \end{DoxyCompactList}\item 
+\hypertarget{class_game_af8abce48250bf82bc64e30ecc4f2074b}{}std\+::vector$<$ \hyperlink{struct_game_1_1_rank}{Rank} $>$ {\bfseries get\+Rank} () const \label{class_game_af8abce48250bf82bc64e30ecc4f2074b}
+
+\item 
+void \hyperlink{class_game_a6b565543a6eaf08a583a9944e8e48d5e}{Ranke} ()
+\begin{DoxyCompactList}\small\item\em Ranke é responsável por imprimir no arquivo txt o rank. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_game}{Game} \& \hyperlink{class_game_ab5b377b52d78849aed162538121a20a0}{get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Obtem a referencia desta classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_af79d7cfc146a74d69fe2cbc9f39ddd54}{}void {\bfseries update\+Player1\+Pos} ()\label{class_game_af79d7cfc146a74d69fe2cbc9f39ddd54}
+
+\item 
+\hypertarget{class_game_a73139d0f4c34ebfca2b79877d552a39d}{}void {\bfseries update\+Player2\+Pos} ()\label{class_game_a73139d0f4c34ebfca2b79877d552a39d}
+
+\item 
+\hypertarget{class_game_ac71e0aadacf88a71f644f4accc1d5d0c}{}void {\bfseries update\+O\+Ground\+Color} ()\label{class_game_ac71e0aadacf88a71f644f4accc1d5d0c}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_a94d3832f6cd4ea6fe77127b5ce416e08}{}void {\bfseries initialize\+G\+L} ()\label{class_game_a94d3832f6cd4ea6fe77127b5ce416e08}
+
+\item 
+\hypertarget{class_game_ae0e64dfe8c1cdc82700cdad1ebcb0488}{}void {\bfseries resize\+G\+L} (int w, int h)\label{class_game_ae0e64dfe8c1cdc82700cdad1ebcb0488}
+
+\item 
+\hypertarget{class_game_a893aebaba4c902d2b028cc32a8ed75e9}{}void {\bfseries paint\+G\+L} ()\label{class_game_a893aebaba4c902d2b028cc32a8ed75e9}
+
+\item 
+\hypertarget{class_game_a704ba119948eebd1b6dfc547de967796}{}void {\bfseries mouse\+Press\+Event} (Q\+Mouse\+Event $\ast$event)\label{class_game_a704ba119948eebd1b6dfc547de967796}
+
+\item 
+\hypertarget{class_game_ad761e49ff42758930e76b477d08ba068}{}void {\bfseries mouse\+Move\+Event} (Q\+Mouse\+Event $\ast$event)\label{class_game_ad761e49ff42758930e76b477d08ba068}
+
+\item 
+\hypertarget{class_game_a08d72c91a6daedc8fa48194253f5e567}{}void {\bfseries key\+Press\+Event} (Q\+Key\+Event $\ast$event)\label{class_game_a08d72c91a6daedc8fa48194253f5e567}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gerencia o jogo. 
+
+Definition at line 32 of file game.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_ab5b377b52d78849aed162538121a20a0}{}\index{Game@{Game}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Game@{Game}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Game}\& Game\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_game_ab5b377b52d78849aed162538121a20a0}
+
+
+Obtem a referencia desta classe. 
+
+\begin{DoxyReturn}{Returns}
+a referencia desta classe 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file game.\+h.
+
+\hypertarget{class_game_afc0740e2ebbf574081ba72894ffb167d}{}\index{Game@{Game}!get\+Show\+Path@{get\+Show\+Path}}
+\index{get\+Show\+Path@{get\+Show\+Path}!Game@{Game}}
+\subsubsection[{get\+Show\+Path}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+::get\+Show\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_afc0740e2ebbf574081ba72894ffb167d}
+
+
+Indica se o caminho de saida esta ou nao sendo exibido. 
+
+\begin{DoxyReturn}{Returns}
+true se o caminho de saida esta sendo exibido, senao retorna false 
+\end{DoxyReturn}
+
+
+Definition at line 159 of file game.\+h.
+
+\hypertarget{class_game_a5a0887d56454e9f31f800018f211ab1f}{}\index{Game@{Game}!get\+View\+Rect@{get\+View\+Rect}}
+\index{get\+View\+Rect@{get\+View\+Rect}!Game@{Game}}
+\subsubsection[{get\+View\+Rect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rect} Game\+::get\+View\+Rect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_a5a0887d56454e9f31f800018f211ab1f}
+
+
+get\+View\+Rect 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 165 of file game.\+h.
+
+\hypertarget{class_game_abb31098c8d016b98888fe9acac497fcb}{}\index{Game@{Game}!is\+Running@{is\+Running}}
+\index{is\+Running@{is\+Running}!Game@{Game}}
+\subsubsection[{is\+Running}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+::is\+Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_abb31098c8d016b98888fe9acac497fcb}
+
+
+Checa se o jogo esta em andamento. 
+
+\begin{DoxyReturn}{Returns}
+true se o jogo esta em andamento, senao retorna false 
+\end{DoxyReturn}
+
+
+Definition at line 135 of file game.\+h.
+
+\hypertarget{class_game_a178202f60562a3e55ad721dfb03aff09}{}\index{Game@{Game}!Ler\+\_\+\+Rank@{Ler\+\_\+\+Rank}}
+\index{Ler\+\_\+\+Rank@{Ler\+\_\+\+Rank}!Game@{Game}}
+\subsubsection[{Ler\+\_\+\+Rank}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::\+Ler\+\_\+\+Rank (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_a178202f60562a3e55ad721dfb03aff09}
+
+
+Ler\+\_\+\+Rank é responsável por fazer a leitura do rank. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 949 of file game.\+cpp.
+
+\hypertarget{class_game_a6b565543a6eaf08a583a9944e8e48d5e}{}\index{Game@{Game}!Ranke@{Ranke}}
+\index{Ranke@{Ranke}!Game@{Game}}
+\subsubsection[{Ranke}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::\+Ranke (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_a6b565543a6eaf08a583a9944e8e48d5e}
+
+
+Ranke é responsável por imprimir no arquivo txt o rank. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 987 of file game.\+cpp.
+
+\hypertarget{class_game_ae2c8fe91e4c6c7e7e49149bc70e7a5c8}{}\index{Game@{Game}!set\+Cell\+Color@{set\+Cell\+Color}}
+\index{set\+Cell\+Color@{set\+Cell\+Color}!Game@{Game}}
+\subsubsection[{set\+Cell\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::set\+Cell\+Color (
+\begin{DoxyParamCaption}
+\item[{const {\bf Color} \&}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_ae2c8fe91e4c6c7e7e49149bc70e7a5c8}
+
+
+Define a cor da celula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & uma cor qualquer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 95 of file game.\+h.
+
+\hypertarget{class_game_a2116158681dfa5fdb17e1ebbadd3348e}{}\index{Game@{Game}!set\+Cell\+Size@{set\+Cell\+Size}}
+\index{set\+Cell\+Size@{set\+Cell\+Size}!Game@{Game}}
+\subsubsection[{set\+Cell\+Size}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::set\+Cell\+Size (
+\begin{DoxyParamCaption}
+\item[{int}]{size = {\ttfamily 10}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_a2116158681dfa5fdb17e1ebbadd3348e}
+
+
+Define o tamanho de cada celula do labirinto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & o tamanho da celula \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 119 of file game.\+h.
+
+\hypertarget{class_game_aaa49bf77525ace364d84eb5840fb7f16}{}\index{Game@{Game}!set\+Dificuldade@{set\+Dificuldade}}
+\index{set\+Dificuldade@{set\+Dificuldade}!Game@{Game}}
+\subsubsection[{set\+Dificuldade}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::set\+Dificuldade (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+::\+Dificuldade}}]{dif}
+\end{DoxyParamCaption}
+)}\label{class_game_aaa49bf77525ace364d84eb5840fb7f16}
+
+
+Define a dificuldade do jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dif} & uma dificuldade do jogo \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 74 of file game.\+cpp.
+
+\hypertarget{class_game_a68e69f6f417f07c7f7bfc7e5660d23ab}{}\index{Game@{Game}!set\+Mode@{set\+Mode}}
+\index{set\+Mode@{set\+Mode}!Game@{Game}}
+\subsubsection[{set\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::set\+Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+::\+Mode}}]{mode}
+\end{DoxyParamCaption}
+)}\label{class_game_a68e69f6f417f07c7f7bfc7e5660d23ab}
+
+
+Define o modo de jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & um modo de jogo \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file game.\+cpp.
+
+\hypertarget{class_game_a290ed80541953c02d4012feae9cf84b4}{}\index{Game@{Game}!set\+Show\+Labirinto@{set\+Show\+Labirinto}}
+\index{set\+Show\+Labirinto@{set\+Show\+Labirinto}!Game@{Game}}
+\subsubsection[{set\+Show\+Labirinto}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::set\+Show\+Labirinto (
+\begin{DoxyParamCaption}
+\item[{bool}]{yes = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_a290ed80541953c02d4012feae9cf84b4}
+
+
+Exibe ou oculta o labirinto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yes} & Se true, exibe o labirinto, senao nao exibe. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 83 of file game.\+h.
+
+\hypertarget{class_game_ad957f89ebf5557d687332737f5c48174}{}\index{Game@{Game}!set\+Show\+Path@{set\+Show\+Path}}
+\index{set\+Show\+Path@{set\+Show\+Path}!Game@{Game}}
+\subsubsection[{set\+Show\+Path}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::set\+Show\+Path (
+\begin{DoxyParamCaption}
+\item[{bool}]{yes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_ad957f89ebf5557d687332737f5c48174}
+
+
+Oculta ou exibe o caminho para sair do labirinto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yes} & se true, revela o caminho, senao nao revela. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 140 of file game.\+h.
+
+\hypertarget{class_game_acf0eab33d0720829856f04df97ae0b60}{}\index{Game@{Game}!set\+Show\+Player1@{set\+Show\+Player1}}
+\index{set\+Show\+Player1@{set\+Show\+Player1}!Game@{Game}}
+\subsubsection[{set\+Show\+Player1}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::set\+Show\+Player1 (
+\begin{DoxyParamCaption}
+\item[{bool}]{yes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_acf0eab33d0720829856f04df97ae0b60}
+
+
+Oculta ou mostra o player1\+\_\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yes} & se true, mostra o player1, senao nao mostra \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 146 of file game.\+h.
+
+\hypertarget{class_game_a8c3fb62db4b6712d32dc02897464ef77}{}\index{Game@{Game}!set\+Show\+Player2@{set\+Show\+Player2}}
+\index{set\+Show\+Player2@{set\+Show\+Player2}!Game@{Game}}
+\subsubsection[{set\+Show\+Player2}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::set\+Show\+Player2 (
+\begin{DoxyParamCaption}
+\item[{bool}]{yes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_a8c3fb62db4b6712d32dc02897464ef77}
+
+
+Oculta ou mostra o player2\+\_\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yes} & se true, mostra o player2, senao nao mostra \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 152 of file game.\+h.
+
+\hypertarget{class_game_a74afd2e4820b0113a1276ba866e5e689}{}\index{Game@{Game}!set\+Wall\+Color@{set\+Wall\+Color}}
+\index{set\+Wall\+Color@{set\+Wall\+Color}!Game@{Game}}
+\subsubsection[{set\+Wall\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::set\+Wall\+Color (
+\begin{DoxyParamCaption}
+\item[{const {\bf Color} \&}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_a74afd2e4820b0113a1276ba866e5e689}
+
+
+Define a cor da parede. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & uma cor qualquer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 89 of file game.\+h.
+
+\hypertarget{class_game_a32ec249abb13c2d4f45f07003046536c}{}\index{Game@{Game}!set\+Wall\+Thickness@{set\+Wall\+Thickness}}
+\index{set\+Wall\+Thickness@{set\+Wall\+Thickness}!Game@{Game}}
+\subsubsection[{set\+Wall\+Thickness}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::set\+Wall\+Thickness (
+\begin{DoxyParamCaption}
+\item[{int}]{thickness = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_a32ec249abb13c2d4f45f07003046536c}
+
+
+Define a espessura da parede. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thickness} & a espessura da parede. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 113 of file game.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game.\+h\item 
+game.\+cpp\end{DoxyCompactItemize}

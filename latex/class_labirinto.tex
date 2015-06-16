@@ -1,0 +1,352 @@
+\hypertarget{class_labirinto}{}\section{Labirinto Class Reference}
+\label{class_labirinto}\index{Labirinto@{Labirinto}}
+
+
+Classe para criar um labirinto.  
+
+
+
+
+{\ttfamily \#include $<$labirinto.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_labirinto_1_1_cell}{Cell}
+\begin{DoxyCompactList}\small\item\em Uma celula do labirinto. Uma celula representa uma posicao unica dentro de um labirinto. Cada celula pode ter ate 4 paredes erguidas, e pelo menos duas paredes dela sao compartilhadas com outras celulas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336}{Wall} \{ \\*
+{\bfseries None} = 0, 
+\hyperlink{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336a51cd26ae8c945f233f769e8f825576b7}{North\+Wall} = 1, 
+\hyperlink{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336aa4d6ec05499a34df7626c5163cb8c6c6}{East\+Wall} = 2, 
+\hyperlink{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336a0b35a31c56ee4c65e64e479bd6b77d43}{South\+Wall} = 4, 
+\\*
+\hyperlink{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336a5f71f0a5c304ca89e2aee5d8159b6d39}{West\+Wall} = 8
+ \}
+\begin{DoxyCompactList}\small\item\em As 4 possiveis paredes de uma celula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_labirinto_a086420b862b2009f7da95967a075bd36}{Labirinto} (int \hyperlink{class_labirinto_a4f8c7a42d8a5edad12482f4d2110626c}{rows}, int \hyperlink{class_labirinto_a6614a825d5e93ec1c053003a804ce2a7}{columns})
+\begin{DoxyCompactList}\small\item\em Cria um labirinto. \end{DoxyCompactList}\item 
+bool \hyperlink{class_labirinto_a02a05067a6380b1e720da444bb4718f7}{build} ()
+\begin{DoxyCompactList}\small\item\em Constroi o labirinto. O processo de construcao consiste em criar uma entrada e saida, o caminho de saida e suas ramificacoes de modo a tornar o labirinto totalmente conexo. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{struct_labirinto_1_1_cell}{Cell} $>$ \hyperlink{class_labirinto_a5560f3c1a18c95009ced3e855d53bebb}{get\+Path} (const \hyperlink{struct_labirinto_1_1_cell}{Cell} \&c1, const \hyperlink{struct_labirinto_1_1_cell}{Cell} \&c2) const 
+\begin{DoxyCompactList}\small\item\em Obtem o caminho para sair do labirinto. \end{DoxyCompactList}\item 
+int \hyperlink{class_labirinto_a9b6d4d4b8a3b53aa10761c8fc0e325d9}{get\+Destroyed\+Walls} (const \hyperlink{struct_labirinto_1_1_cell}{Cell} \&cell) const 
+\begin{DoxyCompactList}\small\item\em Obtem as paredes derrubadas de uma celula. Para extrair as paredes do inteiro retornado, use o operador binario \&. Por exemplo, supondo que a funcao retorne 3, para saber se a parede Norte esta destruida, use a expressao \textquotesingle{}3 \& \hyperlink{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336a51cd26ae8c945f233f769e8f825576b7}{Labirinto\+::\+North\+Wall}\textquotesingle{}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_labirinto_a8054ff4d8c0712dffad07768bdcb1b6d}{is\+Cell\+Valid} (const \hyperlink{struct_labirinto_1_1_cell}{Cell} \&cell) const 
+\begin{DoxyCompactList}\small\item\em Verifica se uma celula e valida, ou seja, esta no labirinto. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{struct_labirinto_1_1_cell}{Cell} $>$ \hyperlink{class_labirinto_a49eb1b0dd3bdb40ff020dfff1f5741be}{get\+Neighbors} (const \hyperlink{struct_labirinto_1_1_cell}{Cell} \&cell, int walls) const 
+\begin{DoxyCompactList}\small\item\em Obtem as celulas vizinhas em relacao as paredes especificadas. \end{DoxyCompactList}\item 
+bool \hyperlink{class_labirinto_affebfa176e56784b0ca6e1c8f5a9d1dc}{is\+Wall\+Shared} (\hyperlink{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336}{Wall} wall, const \hyperlink{struct_labirinto_1_1_cell}{Cell} \&cell, \hyperlink{struct_labirinto_1_1_cell}{Cell} $\ast$other\+\_\+cell=N\+U\+L\+L) const 
+\begin{DoxyCompactList}\small\item\em Verifica se uma parede e compartilhada, ou seja, pertence a duas celulas. Se a parede for compartilhada e o parametro opcional nao for nulo, entao ele recebe a outra celula que possui a parede. Note que uma parede nao e compartilhada se, e somente se, ela delimita o labirinto. \end{DoxyCompactList}\item 
+int \hyperlink{class_labirinto_a4f8c7a42d8a5edad12482f4d2110626c}{rows} () const 
+\begin{DoxyCompactList}\small\item\em Obtem o numero de linhas do labirinto. \end{DoxyCompactList}\item 
+int \hyperlink{class_labirinto_a6614a825d5e93ec1c053003a804ce2a7}{columns} () const 
+\begin{DoxyCompactList}\small\item\em Obtem o numero de colunas do labirinto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336}{Wall} \hyperlink{class_labirinto_a567e53ede46c4341dce6e44c2e7637e4}{get\+Opposite\+Wall} (\hyperlink{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336}{Wall} wall)
+\begin{DoxyCompactList}\small\item\em Obtem a parede oposta a uma parede. Por exemplo, a parede oposta a parede Norte e a parede Sul, e a parede oposta a parede Leste e a parede Oeste. \end{DoxyCompactList}\item 
+static \hyperlink{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336}{Wall} \hyperlink{class_labirinto_ac75602d107390976f691cb0865f81ec5}{pick\+Wall\+Randomly} (int walls)
+\begin{DoxyCompactList}\small\item\em Escolhe aleatoriamente uma parede. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe para criar um labirinto. 
+
+Projeto\+: Maze Versao\+: 1.\+0b Autores\+: Leno Raimundo 
+
+Definition at line 17 of file labirinto.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336}{}\index{Labirinto@{Labirinto}!Wall@{Wall}}
+\index{Wall@{Wall}!Labirinto@{Labirinto}}
+\subsubsection[{Wall}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Labirinto\+::\+Wall}}\label{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336}
+
+
+As 4 possiveis paredes de uma celula. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{North\+Wall@{North\+Wall}!Labirinto@{Labirinto}}\index{Labirinto@{Labirinto}!North\+Wall@{North\+Wall}}\item[{\em 
+\hypertarget{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336a51cd26ae8c945f233f769e8f825576b7}{}North\+Wall\label{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336a51cd26ae8c945f233f769e8f825576b7}
+}]Parede Norte. \index{East\+Wall@{East\+Wall}!Labirinto@{Labirinto}}\index{Labirinto@{Labirinto}!East\+Wall@{East\+Wall}}\item[{\em 
+\hypertarget{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336aa4d6ec05499a34df7626c5163cb8c6c6}{}East\+Wall\label{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336aa4d6ec05499a34df7626c5163cb8c6c6}
+}]Parede Leste. \index{South\+Wall@{South\+Wall}!Labirinto@{Labirinto}}\index{Labirinto@{Labirinto}!South\+Wall@{South\+Wall}}\item[{\em 
+\hypertarget{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336a0b35a31c56ee4c65e64e479bd6b77d43}{}South\+Wall\label{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336a0b35a31c56ee4c65e64e479bd6b77d43}
+}]Parede Sul. \index{West\+Wall@{West\+Wall}!Labirinto@{Labirinto}}\index{Labirinto@{Labirinto}!West\+Wall@{West\+Wall}}\item[{\em 
+\hypertarget{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336a5f71f0a5c304ca89e2aee5d8159b6d39}{}West\+Wall\label{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336a5f71f0a5c304ca89e2aee5d8159b6d39}
+}]Parede Oeste. \end{description}
+\end{Desc}
+
+
+Definition at line 23 of file labirinto.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_labirinto_a086420b862b2009f7da95967a075bd36}{}\index{Labirinto@{Labirinto}!Labirinto@{Labirinto}}
+\index{Labirinto@{Labirinto}!Labirinto@{Labirinto}}
+\subsubsection[{Labirinto}]{\setlength{\rightskip}{0pt plus 5cm}Labirinto\+::\+Labirinto (
+\begin{DoxyParamCaption}
+\item[{int}]{rows, }
+\item[{int}]{columns}
+\end{DoxyParamCaption}
+)}\label{class_labirinto_a086420b862b2009f7da95967a075bd36}
+
+
+Cria um labirinto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & O numero de linhas, ou seja, o numero de celulas dispostas horizontalmente no labirinto. \\
+\hline
+{\em columns} & O numero de colunas, ou seja, o numero de celulas dispostas verticalmente no labirinto. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file labirinto.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_labirinto_a02a05067a6380b1e720da444bb4718f7}{}\index{Labirinto@{Labirinto}!build@{build}}
+\index{build@{build}!Labirinto@{Labirinto}}
+\subsubsection[{build}]{\setlength{\rightskip}{0pt plus 5cm}bool Labirinto\+::build (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_labirinto_a02a05067a6380b1e720da444bb4718f7}
+
+
+Constroi o labirinto. O processo de construcao consiste em criar uma entrada e saida, o caminho de saida e suas ramificacoes de modo a tornar o labirinto totalmente conexo. 
+
+\begin{DoxyReturn}{Returns}
+sempre true. 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file labirinto.\+cpp.
+
+\hypertarget{class_labirinto_a6614a825d5e93ec1c053003a804ce2a7}{}\index{Labirinto@{Labirinto}!columns@{columns}}
+\index{columns@{columns}!Labirinto@{Labirinto}}
+\subsubsection[{columns}]{\setlength{\rightskip}{0pt plus 5cm}int Labirinto\+::columns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_labirinto_a6614a825d5e93ec1c053003a804ce2a7}
+
+
+Obtem o numero de colunas do labirinto. 
+
+\begin{DoxyReturn}{Returns}
+o numero de colunas do labirinto 
+\end{DoxyReturn}
+
+
+Definition at line 148 of file labirinto.\+h.
+
+\hypertarget{class_labirinto_a9b6d4d4b8a3b53aa10761c8fc0e325d9}{}\index{Labirinto@{Labirinto}!get\+Destroyed\+Walls@{get\+Destroyed\+Walls}}
+\index{get\+Destroyed\+Walls@{get\+Destroyed\+Walls}!Labirinto@{Labirinto}}
+\subsubsection[{get\+Destroyed\+Walls}]{\setlength{\rightskip}{0pt plus 5cm}int Labirinto\+::get\+Destroyed\+Walls (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cell} \&}]{cell}
+\end{DoxyParamCaption}
+) const}\label{class_labirinto_a9b6d4d4b8a3b53aa10761c8fc0e325d9}
+
+
+Obtem as paredes derrubadas de uma celula. Para extrair as paredes do inteiro retornado, use o operador binario \&. Por exemplo, supondo que a funcao retorne 3, para saber se a parede Norte esta destruida, use a expressao \textquotesingle{}3 \& \hyperlink{class_labirinto_ab6ffda1571ea6394c382e12b4bb4c336a51cd26ae8c945f233f769e8f825576b7}{Labirinto\+::\+North\+Wall}\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & uma celula do labirinto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+um inteiro contendo as paredes destruidas da celula. 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file labirinto.\+cpp.
+
+\hypertarget{class_labirinto_a49eb1b0dd3bdb40ff020dfff1f5741be}{}\index{Labirinto@{Labirinto}!get\+Neighbors@{get\+Neighbors}}
+\index{get\+Neighbors@{get\+Neighbors}!Labirinto@{Labirinto}}
+\subsubsection[{get\+Neighbors}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Labirinto\+::\+Cell} $>$ Labirinto\+::get\+Neighbors (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cell} \&}]{cell, }
+\item[{int}]{walls}
+\end{DoxyParamCaption}
+) const}\label{class_labirinto_a49eb1b0dd3bdb40ff020dfff1f5741be}
+
+
+Obtem as celulas vizinhas em relacao as paredes especificadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & uma celula do labirinto \\
+\hline
+{\em walls} & uma ou mais paredes da celula \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uma lista das celulas vizinhas 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file labirinto.\+cpp.
+
+\hypertarget{class_labirinto_a567e53ede46c4341dce6e44c2e7637e4}{}\index{Labirinto@{Labirinto}!get\+Opposite\+Wall@{get\+Opposite\+Wall}}
+\index{get\+Opposite\+Wall@{get\+Opposite\+Wall}!Labirinto@{Labirinto}}
+\subsubsection[{get\+Opposite\+Wall}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Labirinto\+::\+Wall} Labirinto\+::get\+Opposite\+Wall (
+\begin{DoxyParamCaption}
+\item[{{\bf Labirinto\+::\+Wall}}]{wall}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_labirinto_a567e53ede46c4341dce6e44c2e7637e4}
+
+
+Obtem a parede oposta a uma parede. Por exemplo, a parede oposta a parede Norte e a parede Sul, e a parede oposta a parede Leste e a parede Oeste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wall} & uma parede qualquer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a parede oposta a parede especificada. 
+\end{DoxyReturn}
+
+
+Definition at line 213 of file labirinto.\+cpp.
+
+\hypertarget{class_labirinto_a5560f3c1a18c95009ced3e855d53bebb}{}\index{Labirinto@{Labirinto}!get\+Path@{get\+Path}}
+\index{get\+Path@{get\+Path}!Labirinto@{Labirinto}}
+\subsubsection[{get\+Path}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Labirinto\+::\+Cell} $>$ Labirinto\+::get\+Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cell} \&}]{c1, }
+\item[{const {\bf Cell} \&}]{c2}
+\end{DoxyParamCaption}
+) const}\label{class_labirinto_a5560f3c1a18c95009ced3e855d53bebb}
+
+
+Obtem o caminho para sair do labirinto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & A celula onde o caminho sera iniciado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um vetor de celulas que representa o caminho para sair do labirinto. 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file labirinto.\+cpp.
+
+\hypertarget{class_labirinto_a8054ff4d8c0712dffad07768bdcb1b6d}{}\index{Labirinto@{Labirinto}!is\+Cell\+Valid@{is\+Cell\+Valid}}
+\index{is\+Cell\+Valid@{is\+Cell\+Valid}!Labirinto@{Labirinto}}
+\subsubsection[{is\+Cell\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool Labirinto\+::is\+Cell\+Valid (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cell} \&}]{cell}
+\end{DoxyParamCaption}
+) const}\label{class_labirinto_a8054ff4d8c0712dffad07768bdcb1b6d}
+
+
+Verifica se uma celula e valida, ou seja, esta no labirinto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & uma celula qualquer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a celula especificada e valida, senao retorna false. 
+\end{DoxyReturn}
+
+
+Definition at line 128 of file labirinto.\+cpp.
+
+\hypertarget{class_labirinto_affebfa176e56784b0ca6e1c8f5a9d1dc}{}\index{Labirinto@{Labirinto}!is\+Wall\+Shared@{is\+Wall\+Shared}}
+\index{is\+Wall\+Shared@{is\+Wall\+Shared}!Labirinto@{Labirinto}}
+\subsubsection[{is\+Wall\+Shared}]{\setlength{\rightskip}{0pt plus 5cm}bool Labirinto\+::is\+Wall\+Shared (
+\begin{DoxyParamCaption}
+\item[{{\bf Labirinto\+::\+Wall}}]{wall, }
+\item[{const {\bf Cell} \&}]{cell, }
+\item[{{\bf Labirinto\+::\+Cell} $\ast$}]{other\+\_\+cell = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const}\label{class_labirinto_affebfa176e56784b0ca6e1c8f5a9d1dc}
+
+
+Verifica se uma parede e compartilhada, ou seja, pertence a duas celulas. Se a parede for compartilhada e o parametro opcional nao for nulo, entao ele recebe a outra celula que possui a parede. Note que uma parede nao e compartilhada se, e somente se, ela delimita o labirinto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wall} & uma das paredes da celula especificada \\
+\hline
+{\em cell} & uma celula do labirinto \\
+\hline
+{\em other\+\_\+cell} & opcional. Ponteiro que recebera a outra celula que compartilha a parede especificada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a parede e compartilhada, senao retorna false. 
+\end{DoxyReturn}
+
+
+Definition at line 159 of file labirinto.\+cpp.
+
+\hypertarget{class_labirinto_ac75602d107390976f691cb0865f81ec5}{}\index{Labirinto@{Labirinto}!pick\+Wall\+Randomly@{pick\+Wall\+Randomly}}
+\index{pick\+Wall\+Randomly@{pick\+Wall\+Randomly}!Labirinto@{Labirinto}}
+\subsubsection[{pick\+Wall\+Randomly}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Labirinto\+::\+Wall} Labirinto\+::pick\+Wall\+Randomly (
+\begin{DoxyParamCaption}
+\item[{int}]{walls}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_labirinto_ac75602d107390976f691cb0865f81ec5}
+
+
+Escolhe aleatoriamente uma parede. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em walls} & as paredes que podem ser escolhidas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uma parede 
+\end{DoxyReturn}
+
+
+Definition at line 251 of file labirinto.\+cpp.
+
+\hypertarget{class_labirinto_a4f8c7a42d8a5edad12482f4d2110626c}{}\index{Labirinto@{Labirinto}!rows@{rows}}
+\index{rows@{rows}!Labirinto@{Labirinto}}
+\subsubsection[{rows}]{\setlength{\rightskip}{0pt plus 5cm}int Labirinto\+::rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_labirinto_a4f8c7a42d8a5edad12482f4d2110626c}
+
+
+Obtem o numero de linhas do labirinto. 
+
+\begin{DoxyReturn}{Returns}
+o numero de linhas do labirinto 
+\end{DoxyReturn}
+
+
+Definition at line 141 of file labirinto.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+labirinto.\+h\item 
+labirinto.\+cpp\end{DoxyCompactItemize}
