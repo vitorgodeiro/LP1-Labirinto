@@ -10,4 +10,5 @@ Para executar recomenda-se abrir o projeto (arquivo: labirinto.pro) no QT Creato
 ## Melhorias 
 Uma melhoria para ser realizada nesse projeto é implementar o modo de jogo multiplayer via rede.
 
-
+## Licença
+Este projeto é licenciado sob a licença MIT - consulte o arquivo [LICENSE](LICENSE) para obter detalhes.
